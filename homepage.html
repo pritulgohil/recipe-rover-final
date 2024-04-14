@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <title>Recipe Rover</title>
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="navigation-container">
+        <div class="logo">
+          <a class="homepage-link" href="index.html">
+            <div class="logo-container">
+              <img src="Assets/logo.jpg" alt="" />
+              <h1 class="heading">Recipe Rover</h1>
+            </div>
+          </a>
+        </div>
+        <div class="button-container">
+          <div class="profile-area">
+            <img src="Assets/profile.png" alt="" />
+            <h1 class="welcome-user" id="welcome-user"></h1>
+          </div>
+          <button id="notification-button" class="navigation-button">
+            Allow Notifications
+          </button>
+          <button id="logout-button" class="navigation-button">Logout</button>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-container">
+        <div class="content">
+          <div class="content-container">
+            <div class="content-header">
+              <h2 class="recipe-header">Your Recipes</h2>
+            </div>
+          </div>
+        </div>
+        <div id="card-area" class="card-area"></div>
+      </div>
+    </div>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyD7S1rN0kZ6KqWwt7zzgHNzKV03h7qbg3A",
+        authDomain: "recipe-rover-32c0b.firebaseapp.com",
+        projectId: "recipe-rover-32c0b",
+        storageBucket: "recipe-rover-32c0b.appspot.com",
+        messagingSenderId: "917406744945",
+        appId: "1:917406744945:web:c8baacbdc97735a5ac36d0",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="Scripts/homepage.js"></script>
+  </body>
+</html>

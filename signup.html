@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Styles/signup.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-container">
+        <div class="login-card">
+          <div class="login-card-container">
+            <!-- <div class="side1">
+              <div class="side-1-container">
+                <img src="Assets/login-page-cover.jpg" alt="" />
+              </div>
+            </div> -->
+            <div class="side2">
+              <div class="side-2-container">
+                <div class="header">
+                  <div class="header-container">
+                    <h1>
+                      <span class="heading-1">Welcome to</span>
+                      <span class="heading-2">Recipe Rover</span>
+                    </h1>
+                    <p class="login-description">
+                      Enter credentials below to sign up for Recipe Rover
+                    </p>
+                  </div>
+                </div>
+                <div class="login-main">
+                  <div class="login-main-container">
+                    <input
+                      type="text"
+                      id="user-name"
+                      class="login-input"
+                      placeholder="Username"
+                    />
+                    <p id="emailError" class="error">Please Input Email</p>
+                    <input
+                      class="login-input"
+                      placeholder="Email"
+                      id="emailInput"
+                      type="text"
+                    />
+                    <p id="emailError" class="error">Please Input Email</p>
+                    <input
+                      class="password-input"
+                      placeholder="Password"
+                      id="passInput"
+                      type="password"
+                    />
+                    <p id="passwordError" class="error">
+                      Please Input Password
+                    </p>
+                    <button id="signup-btn" class="login-button">
+                      Sign Up
+                    </button>
+                    <img
+                      id="signup-loading"
+                      class="fancy-loading"
+                      src="Assets/fancy-loading.gif"
+                      alt=""
+                      loop
+                    />
+                    <p>
+                      Already User?
+                      <a class="sign-up-anchor" href="login.html">Log In</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyD7S1rN0kZ6KqWwt7zzgHNzKV03h7qbg3A",
+        authDomain: "recipe-rover-32c0b.firebaseapp.com",
+        projectId: "recipe-rover-32c0b",
+        storageBucket: "recipe-rover-32c0b.appspot.com",
+        messagingSenderId: "917406744945",
+        appId: "1:917406744945:web:c8baacbdc97735a5ac36d0",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="Scripts/signup.js"></script>
+  </body>
+</html>
